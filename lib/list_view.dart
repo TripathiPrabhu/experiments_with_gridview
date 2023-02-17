@@ -10,10 +10,10 @@ class ListViewBuilder extends StatelessWidget {
       appBar: AppBar(title: const Text("ListView.builder")),
       body: ListView.builder(
           itemCount: 10,
-          itemBuilder: (BuildContext context, int index) {
+          itemBuilder: (ctx, int index) {
             return GestureDetector(
               onTap: (){
-               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ListViewdata(index)));
+               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ListViewdata(index, ctx)));
               },
               child: ListTile(
                   leading: const Icon(Icons.list),

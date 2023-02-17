@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ListViewdata extends StatelessWidget {
   int? index;
-  ListViewdata(this.index);
+  final ctx;
+  ListViewdata(this.index, this.ctx);
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,10 @@ class ListViewdata extends StatelessWidget {
             Text(index.toString(),
             style: TextStyle(
               fontSize: 80,
+              color: Colors.green
+            ),),
+            Text(ctx.runtimeType.toString(),         style: TextStyle(
+              fontSize: 20,
               color: Colors.green
             ),),
           ],
